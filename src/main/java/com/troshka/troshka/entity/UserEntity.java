@@ -4,8 +4,7 @@ package com.troshka.troshka.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 @Getter
 @Setter
@@ -33,5 +32,8 @@ public class UserEntity {
             name="users_roles",
             joinColumns={@JoinColumn(name="USER_ID", referencedColumnName="ID")},
             inverseJoinColumns={@JoinColumn(name="ROLE_ID", referencedColumnName="ID")})
-    private List<UserRoleEntity> roles = new LinkedList<>();
+    private List<UserRoleEntity> roles = new ArrayList<>();
 }
+
+
+
